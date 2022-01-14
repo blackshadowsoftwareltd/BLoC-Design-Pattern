@@ -1,6 +1,6 @@
 # BLoC-Design-Pattern
 
-# Counger App
+# Counter App
  
 ## BlocProvider 
 ## Cubit 
