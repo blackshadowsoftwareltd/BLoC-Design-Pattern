@@ -2,4 +2,6 @@
 
 ## Counter App
 
+## Internet Connectivity App
+
 BLoC Practice
