@@ -83,6 +83,8 @@ class CounterView extends StatelessWidget {
               FloatingActionButton(
                   child: const Icon(Icons.delete_forever),
                   onPressed: () {
+                    // [clear] is used to wipe or invalidate the cache of a [HydratedBloc].
+                    // Calling [clear] will delete the cached state of the bloc but will not modify the current state of the bloc.
                     context.read<BrightnessCubit>().clear();
                     context.read<CounterCubit>().clear();
                   })

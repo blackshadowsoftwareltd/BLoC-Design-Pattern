@@ -28,4 +28,8 @@ class IncrementDecrement extends CounterState {
 
   factory IncrementDecrement.fromJson(String source) =>
       IncrementDecrement.fromMap(json.decode(source));
+
+  @override
+  String toString() =>
+      'IncrementDecrement(counterValue: $counterValue, wasIncremented: $wasIncremented)';
 }
