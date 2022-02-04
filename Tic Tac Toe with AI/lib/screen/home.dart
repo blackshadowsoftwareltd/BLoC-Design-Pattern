@@ -21,6 +21,20 @@ class Home extends StatelessWidget {
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Switch(
+                        value: state.startWithAi,
+                        onChanged: (value) => bloc.setStartWith()),
+                    const SizedBox(width: 10),
+                    Text(
+                      state.startWithAi ? 'Started with AI' : 'Started with me',
+                      style: const TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
                 SizedBox(
                     width: 300,
                     height: 300,

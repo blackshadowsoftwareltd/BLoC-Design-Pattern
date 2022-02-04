@@ -4,21 +4,37 @@ import 'package:meta/meta.dart';
 part 'tic_tac_toe_state.dart';
 
 class TicTacToeCubit extends Cubit<TicTacToeBlocState> {
-  TicTacToeCubit() : super(TicTacToeBlocState(tiles: List.filled(9, 0)));
+  TicTacToeCubit()
+      : super(TicTacToeBlocState(tiles: List.filled(9, 0), startWithAi: false));
+  void setStartWith() {
+    emit(TicTacToeBlocState(
+        tiles: state.tiles,
+        startWithAi: state.startWithAi = !state.startWithAi));
+    resetTiles();
+  }
+
   void onPressed(index) async {
     if (state.tiles[index] == 0 &&
         !isWinning(1, state.tiles) &&
         !isWinning(2, state.tiles)) {
       state.tiles[index] = 1;
 
-      emit(TicTacToeBlocState(tiles: state.tiles));
+      emit(TicTacToeBlocState(
+          tiles: state.tiles, startWithAi: state.startWithAi));
       if (!isWinning(1, state.tiles) && !isWinning(2, state.tiles)) {
         await runAi();
       }
     }
   }
 
-  void resetTiles() => emit(TicTacToeBlocState(tiles: List.filled(9, 0)));
+  void resetTiles() async {
+    emit(TicTacToeBlocState(
+        tiles: List.filled(9, 0), startWithAi: state.startWithAi));
+    if (state.startWithAi == true) {
+      await Future.delayed(const Duration(milliseconds: 500));
+      runAi();
+    }
+  }
 
   Future<void> runAi() async {
     await Future.delayed(const Duration(milliseconds: 500));
@@ -44,7 +60,8 @@ class TicTacToeCubit extends Cubit<TicTacToeBlocState> {
     if (move != null) {
       state.tiles[move] = 2;
     }
-    emit(TicTacToeBlocState(tiles: state.tiles));
+    emit(
+        TicTacToeBlocState(tiles: state.tiles, startWithAi: state.startWithAi));
   }
 
   bool isWinning(int who, List<int> tiles) {
