@@ -1,4 +1,4 @@
-# api__freezed
+# api_freezed
 
 A new Flutter project.
 

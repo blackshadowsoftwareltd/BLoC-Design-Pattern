@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.api__freezed">
+    package="com.example.api_freezed">
    <application
-        android:label="api__freezed"
+        android:label="api_freezed"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -1,4 +1,4 @@
-package com.example.api__freezed
+package com.example.api_freezed
 
 import io.flutter.embedding.android.FlutterActivity
 

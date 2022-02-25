@@ -1,6 +1,6 @@
 {
-    "name": "api__freezed",
-    "short_name": "api__freezed",
+    "name": "api_freezed",
+    "short_name": "api_freezed",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "api__freezed" "\0"
+            VALUE "FileDescription", "api_freezed" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "api__freezed" "\0"
+            VALUE "InternalName", "api_freezed" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2022 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "api__freezed.exe" "\0"
-            VALUE "ProductName", "api__freezed" "\0"
+            VALUE "OriginalFilename", "api_freezed.exe" "\0"
+            VALUE "ProductName", "api_freezed" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

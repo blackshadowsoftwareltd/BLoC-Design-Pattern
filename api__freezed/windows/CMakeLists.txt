@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(api__freezed LANGUAGES CXX)
+project(api_freezed LANGUAGES CXX)
 
-set(BINARY_NAME "api__freezed")
+set(BINARY_NAME "api_freezed")
 
 cmake_policy(SET CMP0063 NEW)
 
