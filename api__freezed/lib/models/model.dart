@@ -2,7 +2,7 @@
 //
 //     final gamerModel = gamerModelFromJson(jsonString);
 
-// ignore_for_file: prefer_conditional_assignment
+// ignore_for_file: prefer_conditional_assignment, constant_identifier_names
 
 import 'dart:convert';
 
@@ -43,7 +43,7 @@ class GamerModel {
   final DateTime? publishedDate;
   final Type? type;
   final String? platforms;
-  final dynamic? endDate;
+  final dynamic endDate;
   final int? users;
   final Status? status;
   final String? gamerModelUrl;
@@ -117,7 +117,7 @@ class EnumValues<T> {
 
   Map<T, String> get reverse {
     if (reverseMap == null) {
-      reverseMap = map!.map((k, v) => new MapEntry(v, k));
+      reverseMap = map!.map((k, v) => MapEntry(v, k));
     }
     return reverseMap!;
   }

@@ -13,7 +13,7 @@ class GammerApi {
 
     if (response.statusCode == 200) {
       final body = await response.stream.bytesToString();
-      print(body);
+      // print(body);
       return gamerModelFromJson(body);
     } else {
       return null;
